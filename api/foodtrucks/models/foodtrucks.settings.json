@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "foodtrucks",
+  "info": {
+    "name": "foodtrucks",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "image_upload": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "categories": {
+      "collection": "category",
+      "via": "foodtrucks",
+      "dominant": true
+    },
+    "ratings": {
+      "type": "integer"
+    }
+  }
+}
