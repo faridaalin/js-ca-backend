@@ -66,10 +66,6 @@ $RECYCLE.BIN/
 ############################
 
 
-*.log
-*.sql
-*.sqlite
-*.sqlite3
 
 
 ############################
@@ -112,3 +108,5 @@ exports
 *.cache
 build
 .strapi-updater.json
+
+package-lock.json
